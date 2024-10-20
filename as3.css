@@ -1,31 +1,31 @@
 #section1 > div:first-child {
-    background-image: url("https://p4css.github.io/webScroll/assets/pingtong01.png");
+    background-image: url("https://raw.githubusercontent.com/Liya-code/Liya-code.github.io/b8eadbf84b4e2a03e7a3fa0c4f49a1265e22a490/stock1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-          z-index:-1;
+    z-index: -1;
 }
 
 #section2 > div:first-child {
-    background-image: url("https://p4css.github.io/webScroll/assets/pingtong02.png");
+    background-image: url("https://raw.githubusercontent.com/Liya-code/Liya-code.github.io/b8eadbf84b4e2a03e7a3fa0c4f49a1265e22a490/istock2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      z-index:-1;
+    z-index: -1;
 }
 
 #section3 > div:first-child {
-    background-image: url("https://p4css.github.io/webScroll/assets/pingtong03.png");
+    background-image: url("https://raw.githubusercontent.com/Liya-code/Liya-code.github.io/b8eadbf84b4e2a03e7a3fa0c4f49a1265e22a490/istock3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      z-index:-1;
+    z-index: -1;
 }
 
 #section4 > div:first-child {
-    background-image: url("https://p4css.github.io/webScroll/assets/pingtong04.png");
+    background-image: url("https://raw.githubusercontent.com/Liya-code/Liya-code.github.io/b8eadbf84b4e2a03e7a3fa0c4f49a1265e22a490/istock4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      z-index:-1;
+    z-index: -1;
 }
