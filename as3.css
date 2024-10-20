@@ -1,0 +1,31 @@
+#section1 > div:first-child {
+    background-image: url("https://p4css.github.io/webScroll/assets/pingtong01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+          z-index:-1;
+}
+
+#section2 > div:first-child {
+    background-image: url("https://p4css.github.io/webScroll/assets/pingtong02.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      z-index:-1;
+}
+
+#section3 > div:first-child {
+    background-image: url("https://p4css.github.io/webScroll/assets/pingtong03.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      z-index:-1;
+}
+
+#section4 > div:first-child {
+    background-image: url("https://p4css.github.io/webScroll/assets/pingtong04.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      z-index:-1;
+}
