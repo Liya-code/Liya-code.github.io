@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁範例</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        /* 自訂區段標題樣式 */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* 內容區塊樣式 */
+        .content-block {
+            background-color: #dcdcdc; /* 較深的灰色 */
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        /* 平滑滾動 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 區段內邊距 */
+        section {
+            padding: 5rem 0;
+        }
+
+        /* 導覽列保持固定頂端 */
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        /* 頂部Banner 樣式 */
+        .top-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* 固定高度為 200px */
+            background-color: #17a2b8; /* 接近藍色的藍綠色 */
+            color: black; /* 黑色文字 */
+            text-align: center;
+        }
+
+        /* 區段Banner 樣式 */
+        .section-banner {
+            text-align: center;
+            height: 100vh; /* 高度為 100vh */
+            background-color: #ff5733; /* 橘色 */
+            color: white;
+            display: flex; /* 使用 Flexbox 垂直居中 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 內容區塊與Banner區塊的間隔 */
+        .section-content {
+            background-color: #f0f0f0; /* 非常淺的灰色 */
+            height: calc(200vh - 5rem); /* 兩個頁面高度減去上下間距 */
+            margin-top: 2rem; /* 2rem間隔 */
+            padding: 2rem; /* 添加內邊距 */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部Banner -->
+    <div class="container-fluid top-banner">
+        <h1>這裡是Banner</h1> <!-- 修改為「這裡是Banner」 -->
+    </div>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">首頁</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- 將選單靠左 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">區段 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">區段 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">區段 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 區段 1 -->
+    <section id="section1">
+        <!-- 區段1 Banner -->
+        <div class="container-fluid section-banner">
+            <h2>區段 1 Banner</h2>
+        </div>
+        <!-- 區段1 內容區塊 -->
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="content-block">
+                        <h3 class="section-title">區段1 內容</h3>
+                        <p>這是區段 1 的內容。你可以根據需要在這裡添加更多內容。</p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 區段 2 -->
+    <section id="section2">
+        <!-- 區段2 Banner -->
+        <div class="container-fluid section-banner">
+            <h2>區段 2 Banner</h2>
+        </div>
+        <!-- 區段2 內容區塊 -->
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="content-block">
+                        <h3 class="section-title">區段2 內容</h3>
+                        <p>這是區段 2 的內容。每個區段都有獨立的背景色和內容格式。</p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 區段 3 -->
+    <section id="section3">
+        <!-- 區段3 Banner -->
+        <div class="container-fluid section-banner">
+            <h2>區段 3 Banner</h2>
+        </div>
+        <!-- 區段3 內容區塊 -->
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="content-block">
+                        <h3 class="section-title">區段3 內容</h3>
+                        <p>這是區段 3 的內容。你可以在這裡添加更多自訂的資訊。</p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
