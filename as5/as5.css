@@ -16,12 +16,11 @@
 
 #video1, #video2 {
 	position: fixed;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -1;
 	top: 0;
 	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
 	display: none; /* 初始隱藏影片 */
 }
