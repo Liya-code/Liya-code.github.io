@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #F5F1EB; /* 淺米色背景 */
+      color: #5C4B3C; /* 深褐色文字 */
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 40px 0;
+      width: 90%;
+      max-width: 1200px;
+      min-height: 300vh;
+    }
+
+    .timeline::after {
+      content: '';
+      position: fixed;
+      width: 6px;
+      background: #BE9B7B; /* 溫暖的褐色時間軸線 */
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: calc(50% - 40px);
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.8s ease;
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      background: #FFFFFF; /* 純白背景 */
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(92, 75, 60, 0.1); /* 褐色陰影 */
+      border: 1px solid #E8DFD5; /* 淺褐色邊框 */
+    }
+
+    .timeline-content:hover {
+      background: #FDF8F3; /* 滑鼠懸停時的淺米色背景 */
+      transition: background 0.3s ease;
+    }
+
+    .timeline-content h2 {
+      margin: 0 0 10px;
+      color: #8B6B4F; /* 暖褐色標題 */
+      font-size: 1.4em;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      line-height: 1.6;
+      color: #6B5744; /* 深褐色文字 */
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: #D4B499; /* 淺褐色圓點 */
+      border: 4px solid #BE9B7B; /* 深褐色圓點邊框 */
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -52px;
+      box-shadow: 0 0 0 4px rgba(190, 155, 123, 0.2); /* 褐色光暈效果 */
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -12px;
+    }
+
+    .timeline-date {
+      color: #A67B5B; /* 暖褐色日期 */
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+
+    /* 添加一些微互動效果 */
+    .timeline-content:hover .timeline-date {
+      color: #8B6B4F; /* 滑鼠懸停時日期顏色加深 */
+    }
+
+    .timeline-content:hover h2 {
+      color: #755C43; /* 滑鼠懸停時標題顏色加深 */
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2020年1月</div>
+        <h2>公司成立</h2>
+        <p>在創辦人的願景下，我們開始了這段充滿挑戰與機遇的創業旅程。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2020年6月</div>
+        <h2>首輪募資成功</h2>
+        <p>獲得天使投資人的青睞，成功募得第一筆資金，為未來的發展奠定基礎。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2021年3月</div>
+        <h2>產品正式上線</h2>
+        <p>經過一年的開發與測試，我們的核心產品終於與用戶見面了。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2021年9月</div>
+        <h2>用戶突破10萬</h2>
+        <p>感謝用戶的支持，我們的月活躍用戶數突破了10萬大關。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2022年2月</div>
+        <h2>國際市場擴展</h2>
+        <p>開始進軍海外市場，產品服務已覆蓋多個亞洲國家。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2022年8月</div>
+        <h2>技術突破</h2>
+        <p>成功開發新一代核心算法，大幅提升了產品性能。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2023年1月</div>
+        <h2>企業合作計劃</h2>
+        <p>與多家世界500強企業建立戰略合作關係。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2023年7月</div>
+        <h2>榮獲業界大獎</h2>
+        <p>在年度科技創新大會上獲得最具潛力創業公司獎。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2024年1月</div>
+        <h2>完成B輪融資</h2>
+        <p>獲得知名風投公司的投資，估值突破10億美元。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2024年6月</div>
+        <h2>全球化布局</h2>
+        <p>正式進入歐美市場，開設海外分公司，邁向全球化發展。</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2024年12月</div>
+        <h2>用戶數破千萬</h2>
+        <p>全球用戶數突破1000萬，成為行業領先的科技創新企業。</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function handleScroll() {
+      const items = document.querySelectorAll('.timeline-item');
+      items.forEach(item => {
+        if (isElementInViewport(item)) {
+          item.classList.add('visible');
+        } else {
+          item.classList.remove('visible');
+        }
+      });
+    }
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+  </script>
+</body>
+</html>
