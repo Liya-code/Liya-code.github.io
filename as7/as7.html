@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>預防森林野火的發生</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .banner {
+            background: black;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            position: absolute; /* 改為 absolute 而不是 fixed */
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease-out;
+        }
+
+        .parallax-container {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Opening Scene */
+        #div1 {
+            margin-top: 0; /* 移除上方邊距 */
+        }
+
+        #div1 .background {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/1%E6%A3%AE%E6%9E%97%E5%A4%A7%E7%81%AB.jpg?raw=true');
+        }
+
+        #div1 .midground {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/2%E5%8B%95%E7%89%A9%E9%80%83%E8%B7%91.jpg?raw=true');
+            opacity: 0.8;
+        }
+
+        #div1 .foreground {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/3%E9%80%83%E8%B7%91%E7%9A%84%E9%B9%BF.png?raw=true');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: -100% center;
+            animation: runDeer 8s linear infinite;
+        }
+
+        @keyframes runDeer {
+            from { background-position: -50% center; }
+            to { background-position: 150% center; }
+        }
+
+        /* Content 1 */
+        #div2 .background {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/4%E9%BE%9C%E8%A3%82%E7%9A%84%E5%A4%A7%E5%9C%B0.jpeg?raw=true');
+        }
+
+        #div2 .midground {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/5%E6%AE%98%E6%9D%90.jpg?raw=true');
+            transform: translateY(100%);
+            transition: transform 1s ease-out;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2rem;
+            max-width: 80%;
+            line-height: 1.8;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        /* Transition Scene */
+        #div3 {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/6%E6%96%B0%E7%94%9F%E6%9E%97.jpg?raw=true');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Content 2 */
+        #div4 .background {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/7%E6%A3%AE%E6%9E%97.jpg?raw=true');
+        }
+
+        #div4 .midground {
+            background-image: url('https://github.com/Liya-code/Liya-code.github.io/blob/main/as7/8%E5%8B%95%E7%89%A9%E7%BE%A4.jpeg?raw=true');
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .footer {
+            background: black;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* Scroll animations */
+        .visible .midground {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+        }
+
+        .visible .content {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">預防森林野火的發生</div>
+
+    <div id="div1" class="parallax-container">
+        <div class="parallax-layer background"></div>
+        <div class="parallax-layer midground"></div>
+        <div class="parallax-layer foreground"></div>
+    </div>
+
+    <div id="div2" class="parallax-container">
+        <div class="parallax-layer background"></div>
+        <div class="parallax-layer midground"></div>
+        <div class="content">
+            伐林過後容易起火的主要原因在於，伐林過後的現場，會留下非常大量的殘材。這些殘材，包括各種無法進一步加工的小樹、細枝條、以及枯枝落葉。這些殘材，就會成為森林大火的燃料，會增加森林大火發生的機率，也會助長火勢和森林大火延燒的範圍。不僅如此，伐林作業過後的新生林地，通常也不耐火勢。這些新生的同齡林（even-aged stand，每棵樹年齡差不多的森林），也會成為助長火勢的燃料。
+        </div>
+    </div>
+
+    <div id="div3" class="parallax-container"></div>
+
+    <div id="div4" class="parallax-container">
+        <div class="parallax-layer background"></div>
+        <div class="parallax-layer midground"></div>
+        <div class="content">
+            <h2>讓我們一起行動，守護地球的綠色心臟！</h2>
+            <br>
+            1. 支持永續林業發展，反對過度砍伐
+            <br>
+            2. 提高森林火災意識，注意用火安全
+            <br>
+            3. 參與植樹造林活動，恢復生態平衡
+            <br>
+            4. 減少紙張使用，選擇環保材料
+            <br>
+            5. 支持野生動物保育，維護生物多樣性
+        </div>
+    </div>
+
+    <footer class="footer">
+        珍愛森林，永續未來 － 每一個行動都是希望的種子！
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all parallax containers
+        document.querySelectorAll('.parallax-container').forEach((container) => {
+            observer.observe(container);
+        });
+
+        // Parallax effect and banner scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const banner = document.querySelector('.banner');
+            
+            // Banner scroll effect
+            if (scrolled > 0) {
+                banner.style.transform = `translateY(-${scrolled}px)`;
+            } else {
+                banner.style.transform = 'translateY(0)';
+            }
+            
+            // Parallax effect for containers
+            document.querySelectorAll('.parallax-container').forEach((container) => {
+                const limit = container.offsetTop + container.offsetHeight;
+                
+                if (scrolled >= container.offsetTop && scrolled <= limit) {
+                    const parallaxLayers = container.querySelectorAll('.parallax-layer');
+                    parallaxLayers.forEach((layer, index) => {
+                        const speed = (index + 1) * 0.2;
+                        const yPos = -(scrolled - container.offsetTop) * speed;
+                        layer.style.transform = `translateY(${yPos}px)`;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
